@@ -1,0 +1,25 @@
+%before-after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+%icon {
+  display: inline-block;
+  vertical-align: text-bottom;
+  position: relative;
+}
+%text-overflow {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+%clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: block;
+  }
+  &:after {
+    clear: both;
+  }
+}
