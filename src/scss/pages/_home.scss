@@ -1,2 +1,8 @@
 @import '../abstracts/extends';
 @import '../abstracts/variables';
+
+input {
+  @include input-placeholder {
+    color: red;
+  }
+}
