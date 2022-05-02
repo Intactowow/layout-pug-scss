@@ -5,5 +5,5 @@
    * [SCSS](#scss "SCSS")
 2. [Правила для дизайнеров](designers) (./designer/README.md "Правила для дизайнеров")
 
-## SCSS (#scss)
+## SCSS {#scss}
 ### Mixins:
