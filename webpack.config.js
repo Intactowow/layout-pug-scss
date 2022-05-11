@@ -19,7 +19,7 @@ module.exports = {
     assetModuleFilename: 'images/[name][ext][query]',
     clean: true,
   },
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   devServer: {
     static: './dist',
   },
@@ -53,8 +53,10 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
-        exclude: /(node_modules|bower_components)/,
+        use: [
+          "html-loader",
+          "pug-html-loader"
+        ]
       },
       {
         test: /\.m?js$/,

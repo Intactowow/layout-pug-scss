@@ -4,7 +4,7 @@
   "description": "Basic configuration of Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=development&&webpack serve --open --hot",
+    "start": "set NODE_ENV=development&&webpack serve --open",
     "dev": "set NODE_ENV=development&&webpack",
     "build": "set NODE_ENV=production&&webpack"
   },
@@ -26,12 +26,14 @@
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "pug": "^3.0.2",
-    "pug-loader": "^2.4.0",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.3.0",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "pug-html-loader": "^1.1.5"
   }
 }
