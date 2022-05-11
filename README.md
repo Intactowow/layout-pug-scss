@@ -119,8 +119,7 @@ project
 
 ***
 #### spacing
-Отступы в scss не пишем. Указываем их класом.
-margin и padding. Num - размер отступа
+Отступы в scss не пишем. Указываем их класом. Num - размер отступа
 * .mt-{num}, .mr-{num}, .mb-{num}, .ml-{num}
 * .pt-{num}, .pr-{num}, .pb-{num}, .pl-{num}
 
