@@ -3,27 +3,27 @@ $n: (12) !default;
 
 @for $i from 0 through $spacing-step {
   .mt-#{$i} {
-    margin-top: $i * $n + 'px'
+    margin-top: $i * $n + px;
   }
   .mr-#{$i} {
-    margin-right: $i * $n + 'px'
+    margin-right: $i * $n + px;
   }
   .mb-#{$i} {
-    margin-bottom: $i * $n + 'px'
+    margin-bottom: $i * $n + px;
   }
   .ml-#{$i} {
-    margin-left: $i * $n + 'px'
+    margin-left: $i * $n + px;
   }
   .pt-#{$i} {
-    margin-top: $i * $n + 'px'
+    margin-top: $i * $n + px;
   }
   .pr-#{$i} {
-    margin-right: $i * $n + 'px'
+    margin-right: $i * $n + px;
   }
   .pb-#{$i} {
-    margin-bottom: $i * $n + 'px'
+    margin-bottom: $i * $n + px;
   }
   .pl-#{$i} {
-    margin-left: $i * $n + 'px'
+    margin-left: $i * $n + px;
   }
 }

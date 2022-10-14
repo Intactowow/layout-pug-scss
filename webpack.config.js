@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
+const webpack = require('webpack');
 
 let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
@@ -71,6 +72,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jquery: "jQuery",
+      "window.jQuery": "jquery"
+    }),
     new CopyPlugin({
       patterns: [
         {from: "./src/images/", to: "images"},
