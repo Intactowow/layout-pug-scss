@@ -1,3 +1,4 @@
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
@@ -8,6 +9,14 @@ let mode = 'development'
 if (process.env.NODE_ENV === 'production') {
   mode = 'production'
 }
+
+const PATHS = {
+  src: path.join(__dirname, './src'),
+  dist: path.join(__dirname, './dist'),
+}
+
+const PAGES_DIR = `${PATHS.src}/pages/`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
   mode: mode,
@@ -85,9 +94,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/main.css',
     }),
-    new HtmlWebpackPlugin({
-      template: "./src/pages/index.pug",
-      filename: "home.html"
-    }),
+    ...PAGES.map(page => new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/${page}`,
+      filename: `./${page.replace(/\.pug/,'.html')}`
+    }))
   ],
 }
