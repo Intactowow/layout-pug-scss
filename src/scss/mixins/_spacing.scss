@@ -1,5 +1,5 @@
-$spacing-step: (10) !default;
-$n: (12) !default;
+$spacing-step: (20) !default;
+$n: (2) !default;
 
 @for $i from 0 through $spacing-step {
   .mt-#{$i} {
@@ -14,16 +14,24 @@ $n: (12) !default;
   .ml-#{$i} {
     margin-left: $i * $n + px;
   }
-  .pt-#{$i} {
-    margin-top: $i * $n + px;
-  }
-  .pr-#{$i} {
+  .mlr-#{$i} {
+    margin-left: $i * $n + px;
     margin-right: $i * $n + px;
   }
+  .pt-#{$i} {
+    padding-top: $i * $n + px;
+  }
+  .pr-#{$i} {
+    padding-right: $i * $n + px;
+  }
   .pb-#{$i} {
-    margin-bottom: $i * $n + px;
+    padding-bottom: $i * $n + px;
   }
   .pl-#{$i} {
-    margin-left: $i * $n + px;
+    padding-left: $i * $n + px;
+  }
+  .plr-#{$i} {
+    padding-left: $i * $n + px;
+    padding-right: $i * $n + px;
   }
 }
