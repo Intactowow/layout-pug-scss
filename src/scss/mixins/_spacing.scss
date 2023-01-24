@@ -2,6 +2,9 @@ $spacing-step: (20) !default;
 $n: (2) !default;
 
 @for $i from 0 through $spacing-step {
+  .p-#{$i} {
+    margin: $i * $n + px $i * $n + px $i * $n + px $i * $n + px;
+  }
   .mt-#{$i} {
     margin-top: $i * $n + px;
   }
@@ -17,6 +20,9 @@ $n: (2) !default;
   .mlr-#{$i} {
     margin-left: $i * $n + px;
     margin-right: $i * $n + px;
+  }
+  .p-#{$i} {
+    padding: $i * $n + px $i * $n + px $i * $n + px $i * $n + px;
   }
   .pt-#{$i} {
     padding-top: $i * $n + px;
