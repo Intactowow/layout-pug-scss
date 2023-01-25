@@ -1,4 +1,4 @@
-$spacing-step: (20) !default;
+$spacing-step: (30) !default;
 $n: (2) !default;
 
 @for $i from 0 through $spacing-step {
@@ -16,6 +16,10 @@ $n: (2) !default;
   }
   .ml-#{$i} {
     margin-left: $i * $n + px;
+  }
+  .mtb-#{$i} {
+    margin-top: $i * $n + px;
+    margin-bottom: $i * $n + px;
   }
   .mlr-#{$i} {
     margin-left: $i * $n + px;
@@ -35,6 +39,10 @@ $n: (2) !default;
   }
   .pl-#{$i} {
     padding-left: $i * $n + px;
+  }
+  .ptb-#{$i} {
+    padding-top: $i * $n + px;
+    padding-bottom: $i * $n + px;
   }
   .plr-#{$i} {
     padding-left: $i * $n + px;
